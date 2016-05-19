@@ -69,10 +69,10 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\gradle_springMVC_resful_mybatis-0.1.0.jar;%APP_HOME%\lib\joda-time-2.2.jar
+set CLASSPATH=%APP_HOME%\lib\gradle_springMVC_resful_mybatis-0.1.0.jar;%APP_HOME%\lib\spring-boot-starter-web-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-boot-starter-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-boot-starter-tomcat-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-boot-starter-validation-1.3.5.RELEASE.jar;%APP_HOME%\lib\jackson-databind-2.6.6.jar;%APP_HOME%\lib\spring-web-4.2.6.RELEASE.jar;%APP_HOME%\lib\spring-webmvc-4.2.6.RELEASE.jar;%APP_HOME%\lib\spring-boot-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-boot-autoconfigure-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-boot-starter-logging-1.3.5.RELEASE.jar;%APP_HOME%\lib\spring-core-4.2.6.RELEASE.jar;%APP_HOME%\lib\snakeyaml-1.16.jar;%APP_HOME%\lib\tomcat-embed-core-8.0.33.jar;%APP_HOME%\lib\tomcat-embed-el-8.0.33.jar;%APP_HOME%\lib\tomcat-embed-logging-juli-8.0.33.jar;%APP_HOME%\lib\tomcat-embed-websocket-8.0.33.jar;%APP_HOME%\lib\hibernate-validator-5.2.4.Final.jar;%APP_HOME%\lib\jackson-annotations-2.6.6.jar;%APP_HOME%\lib\jackson-core-2.6.6.jar;%APP_HOME%\lib\spring-aop-4.2.6.RELEASE.jar;%APP_HOME%\lib\spring-beans-4.2.6.RELEASE.jar;%APP_HOME%\lib\spring-context-4.2.6.RELEASE.jar;%APP_HOME%\lib\spring-expression-4.2.6.RELEASE.jar;%APP_HOME%\lib\logback-classic-1.1.7.jar;%APP_HOME%\lib\jcl-over-slf4j-1.7.21.jar;%APP_HOME%\lib\jul-to-slf4j-1.7.21.jar;%APP_HOME%\lib\log4j-over-slf4j-1.7.21.jar;%APP_HOME%\lib\validation-api-1.1.0.Final.jar;%APP_HOME%\lib\jboss-logging-3.3.0.Final.jar;%APP_HOME%\lib\classmate-1.1.0.jar;%APP_HOME%\lib\aopalliance-1.0.jar;%APP_HOME%\lib\logback-core-1.1.7.jar;%APP_HOME%\lib\slf4j-api-1.7.21.jar
 
 @rem Execute gradle_springMVC_resful_mybatis
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_SPRING_MVC_RESFUL_MYBATIS_OPTS%  -classpath "%CLASSPATH%" hello.HelloWorld %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_SPRING_MVC_RESFUL_MYBATIS_OPTS%  -classpath "%CLASSPATH%" hello.Application %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
