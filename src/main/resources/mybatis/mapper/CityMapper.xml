@@ -6,4 +6,16 @@
     <select id="selectCityByName" resultType="City">
         select * from city where name = #{name}
     </select>
+
+    <insert id="saveCtiys" useGeneratedKeys= "true" parameterType="java.util.List">
+        <selectKey resultType="int" keyProperty="id" order="AFTER">
+          SELECT
+          LAST_INSERT_ID()
+        </selectKey>
+        insert into city (name,state,country)
+        values
+       <foreach collection="list" item="item" index="index" separator="," >
+          (#{item.name},#{item.state},#{item.country})
+       </foreach>
+    </insert>
 </mapper>
