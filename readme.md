@@ -44,4 +44,27 @@ $gradlew war
 
 You can use **postman**,it's a chrome plugin. like this
 
- ![post man](https://raw.githubusercontent.com/levioZ/levioZ.github.io/master/images/postman.png) 
+ ![post man](https://raw.githubusercontent.com/levioZ/levioZ.github.io/master/images/postman.png)
+
+
+### how to debug
+ you can add the following code to build.gradle
+
+```xml
+ task debugRun(dependsOn:bootRun) {
+     gradle.taskGraph.whenReady { graph ->
+         if (graph.hasTask(debugRun)) {
+             bootRun {
+                 debug = true
+             }
+         }
+     }
+ }
+
+```
+
+and config intellij idea,like that:
+
+![intellijConfiguration](https://raw.githubusercontent.com/levioZ/levioZ.github.io/master/images/intellijConfiguration.png)
+
+

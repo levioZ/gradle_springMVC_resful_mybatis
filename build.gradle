@@ -15,8 +15,6 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 
 
-
-
 repositories {
     mavenCentral()
 }
@@ -46,3 +44,18 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.4'
 }
+
+//add remote debug
+task debugRun(dependsOn:bootRun) {
+    gradle.taskGraph.whenReady { graph ->
+        if (graph.hasTask(debugRun)) {
+            bootRun {
+                debug = true
+            }
+        }
+    }
+}
+
+
+
+
