@@ -67,4 +67,10 @@ and config intellij idea,like that:
 
 ![intellijConfiguration](https://raw.githubusercontent.com/levioZ/levioZ.github.io/master/images/intellijConfiguration.png)
 
+you jsut run
+
+```xml
+$graldew debugRun
+```
+
 
